@@ -6,7 +6,7 @@
    <keywords />
 
    <js-module src="www/plugin.js" name="plugin">
-      <clobbers target="GetOSTheme" />
+      <clobbers target="OSTheme" />
    </js-module>
    <!-- android -->
    <platform name="android">
