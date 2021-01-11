@@ -11,12 +11,12 @@ cordova plugin add cordova-ostheme-darkmode
 
 ### Example
 ```js
-darkmode.isDarkModeEnabled(
-    function(res){
-        //true/false
-        alert("Dark Mode: "+res);
-    }, function(err){
-        console.err(err);
-    });
+OSTheme.darkmode(
+  function(res) {
+    alert("Dark Mode Enabled :- "+res);
+  },
+  function(err) {
+    alert(err);
+  });
 
 ```
