@@ -1,13 +1,13 @@
 cordova.addConstructor(function() {
-    function GetOSTheme() {
+    function OSTheme() {
 
     }
 
-    GetOSTheme.prototype.darkmode = function( base64, successCallback, errorCallback ){
-        cordova.exec(successCallback, errorCallback, "GetOSTheme", "darkmode", [base64]);
+    OSTheme.prototype.darkmode = function( base64, successCallback, errorCallback ){
+        cordova.exec(successCallback, errorCallback, "OSTheme", "darkmode", [base64]);
     }
 
    
-    window.GetOSTheme = new GetOSTheme()
-    return window.GetOSTheme
+    window.OSTheme = new OSTheme()
+    return window.OSTheme
 });
