@@ -1,37 +1,35 @@
 #import "darkmode.h"
-#import <Foundation/Foundation.h>
+#import < Foundation / Foundation.h >
 
-@interface darkmode () 
+  @interface darkmode()
 
-@property (nonatomic) CDVInvokedUrlCommand* command;
+@property(nonatomic) CDVInvokedUrlCommand * command;
 
 @end
 
 @implementation darkmode
-- (void)darkmode:(CDVInvokedUrlCommand*)command
-{
-    CDVPluginResult* pluginResult = nil;
- 
-	 if (@available(iOS 13.0, *)) {
+  -
+  (void) darkmode: (CDVInvokedUrlCommand * ) command {
+    CDVPluginResult * pluginResult = nil;
 
-		if( self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark ){
-		   //is dark
-		}else{
-			//is light
-
-		}
-	}
-    NSString* compresssedstring = [[NSAppearance currentAppearance] name];
-	bool isDark = [appearanceName containsString:@"Dark"];
-
-    if (isDark) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Dark"];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    if (@available(iOS 12.0, *)) {
+      switch (UIScreen.mainScreen.traitCollection.userInterfaceStyle) {
+      case UIUserInterfaceStyleDark:
+        // put your dark mode code here
+        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @ "true"];
+        break;
+      case UIUserInterfaceStyleLight:
+      case UIUserInterfaceStyleUnspecified:
+        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @ "false"];
+        break;
+      default:
+        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_ERROR];
+        break;
+      }
     }
 
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
-	
-}
+    [self.commandDelegate sendPluginResult: pluginResult callbackId: command.callbackId];
+
+  }
 
 @end
