@@ -9,11 +9,11 @@
       switch (UIScreen.mainScreen.traitCollection.userInterfaceStyle) {
       case UIUserInterfaceStyleDark:
         // put your dark mode code here
-        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @ "true"];
+        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @"true"];
         break;
       case UIUserInterfaceStyleLight:
       case UIUserInterfaceStyleUnspecified:
-        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @ "false"];
+        pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_OK messageAsString: @"false"];
         break;
       default:
         pluginResult = [CDVPluginResult resultWithStatus: CDVCommandStatus_ERROR];
