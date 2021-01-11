@@ -7,7 +7,7 @@ import android.util.Log;
 import android.content.res.Configuration;
 import android.provider.Settings;
 
-public class DarkMode extends CordovaPlugin {
+public class OSTheme extends CordovaPlugin {
     String TAG = "DarkModePlugin";
 
     @Override
