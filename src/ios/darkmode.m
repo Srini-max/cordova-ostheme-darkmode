@@ -12,6 +12,15 @@
 {
     CDVPluginResult* pluginResult = nil;
  
+	 if (@available(iOS 13.0, *)) {
+
+		if( self.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark ){
+		   //is dark
+		}else{
+			//is light
+
+		}
+	}
     NSString* compresssedstring = [[NSAppearance currentAppearance] name];
 	bool isDark = [appearanceName containsString:@"Dark"];
 
