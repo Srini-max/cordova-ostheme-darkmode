@@ -3,8 +3,8 @@ cordova.addConstructor(function() {
 
     }
 
-    OSTheme.prototype.darkmode = function( base64, successCallback, errorCallback ){
-        cordova.exec(successCallback, errorCallback, "OSTheme", "darkmode", [base64]);
+    OSTheme.prototype.darkmode = function(  successCallback, errorCallback ){
+        cordova.exec(successCallback, errorCallback, "OSTheme", "darkmode", []);
     }
 
    
