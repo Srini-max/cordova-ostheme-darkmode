@@ -30,7 +30,7 @@ public class OSTheme extends CordovaPlugin {
                     case Configuration.UI_MODE_NIGHT_UNDEFINED:
                         // We don't know what mode we're in, assume notnight
                         Log.d(TAG, "Dark Mode: undefined");
-                        callbackContext.success("false");
+                        callbackContext.success("Not able to detect");
                         break;
                 }
             } catch (Settings.SettingNotFoundException e) {
