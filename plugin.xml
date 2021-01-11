@@ -4,11 +4,8 @@
    <description>Get information about the os theme (light / dark modes).</description>
    <license>MIT</license>
    <keywords />
-     <asset src="www/plugin.js" target="js/plugin.js"/>
 
    <js-module src="www/plugin.js" name="plugin">
-      <runs />
-      <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
       <clobbers target="GetOSTheme" />
    </js-module>
    <!-- android -->
