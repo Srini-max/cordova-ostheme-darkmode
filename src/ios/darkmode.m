@@ -1,16 +1,9 @@
 #import "darkmode.h"
-#import < Foundation / Foundation.h >
-
-  @interface darkmode()
-
-@property(nonatomic) CDVInvokedUrlCommand * command;
-
-@end
-
 @implementation darkmode
-  -
-  (void) darkmode: (CDVInvokedUrlCommand * ) command {
-    CDVPluginResult * pluginResult = nil;
+
+
+-(void)darkmode:(CDVInvokedUrlCommand*)command{
+  CDVPluginResult * pluginResult = nil;
 
     if (@available(iOS 12.0, *)) {
       switch (UIScreen.mainScreen.traitCollection.userInterfaceStyle) {
@@ -30,6 +23,6 @@
 
     [self.commandDelegate sendPluginResult: pluginResult callbackId: command.callbackId];
 
-  }
+}
 
 @end
