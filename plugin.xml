@@ -21,8 +21,8 @@
    <!-- iOS -->
    <platform name="ios">
       <config-file target="config.xml" parent="/*">
-         <feature name="darkmode">
-            <param name="ios-package" value="darkmode" />
+         <feature name="OSTheme">
+            <param name="ios-package" value="OSTheme" />
          </feature>
       </config-file>
       <header-file src="src/ios/darkmode.h" />
