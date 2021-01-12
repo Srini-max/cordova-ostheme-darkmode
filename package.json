@@ -4,7 +4,8 @@
   "cordova": {
     "id": "cordova-ostheme-darkmode",
     "platforms": [
-      "android"
+      "android",
+      "iOS"
     ]
   },
   "description": "Get information about the os theme (light / dark modes)"
